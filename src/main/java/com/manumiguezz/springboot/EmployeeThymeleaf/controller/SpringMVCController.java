@@ -7,9 +7,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class SpringMVCController {
 
-    @GetMapping("/")
-    public String sayHello(Model theModel) {
+    @GetMapping("/date")
+    public String htmlModel(Model theModel) {
         theModel.addAttribute("theDate", new java.util.Date());
-        return "hello";
+        return "htmlModel";
     }
 }
