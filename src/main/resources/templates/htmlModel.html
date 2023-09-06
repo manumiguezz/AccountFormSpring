@@ -2,10 +2,13 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Thymeleaf date model</title>
+
+    <link rel="stylesheet"
+          th:href="@{/css/style.css}"/>
 </head>
 <body>
 
-    <p th:text="'Time on server: ' + ${theDate}" />
+    <p th:text="'Time on server: ' + ${theDate}" class="style"/>
 
 </body>
 </html>
