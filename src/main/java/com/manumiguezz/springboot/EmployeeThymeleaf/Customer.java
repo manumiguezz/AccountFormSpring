@@ -1,9 +1,15 @@
 package com.manumiguezz.springboot.EmployeeThymeleaf;
 
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
+
 public class Customer {
 
     private String firstName;
-    private String lastName;
+
+    @NotNull(message = "is required")
+    @Size(min = 1, message = "is required")
+    private String lastName = "";
 
     public String getFirstName() {
         return firstName;
