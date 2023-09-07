@@ -1,13 +1,13 @@
-package com.manumiguezz.springboot.EmployeeThymeleaf;
+package com.luv2code.springdemo.mvc;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class EmployeeThymeleafApplication {
+public class ValidationdemoApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(EmployeeThymeleafApplication.class, args);
+		SpringApplication.run(ValidationdemoApplication.class, args);
 	}
 
 }

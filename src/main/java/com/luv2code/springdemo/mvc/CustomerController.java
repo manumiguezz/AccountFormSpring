@@ -1,6 +1,5 @@
-package com.manumiguezz.springboot.EmployeeThymeleaf.controller;
+package com.luv2code.springdemo.mvc;
 
-import com.manumiguezz.springboot.EmployeeThymeleaf.Customer;
 import jakarta.validation.Valid;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -10,17 +9,13 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
-public class SpringMVCController {
+public class CustomerController {
 
-//    @GetMapping("/date")
-//    public String htmlModel(Model theModel) {
-//        theModel.addAttribute("theDate", new java.util.Date());
-//        return "htmlModel";
-//    }
+    @GetMapping("/")
+    public String showForm(Model theModel) {
 
-    @GetMapping("/processForm")
-    public String showForm (Model theModel) {
         theModel.addAttribute("customer", new Customer());
+
         return "customer-form";
     }
 
@@ -31,7 +26,16 @@ public class SpringMVCController {
 
         if (theBindingResult.hasErrors()) {
             return "customer-form";
-        } else return "customer-confirmation";
-
+        }
+        else {
+            return "customer-confirmation";
+        }
     }
 }
+
+
+
+
+
+
+
