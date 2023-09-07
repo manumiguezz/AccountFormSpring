@@ -15,6 +15,10 @@
     <br><br>
     Last name: <input type="text" th:field="*{lastName}"/>
 
+    <span th:if="${#fields.hasErrors('lastName')}"
+          th:errors="*{lastName"
+          class="error"></span>
+
   </form>
 
 
