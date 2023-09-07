@@ -12,13 +12,13 @@ import org.springframework.web.bind.annotation.PostMapping;
 @Controller
 public class SpringMVCController {
 
-    @GetMapping("/date")
-    public String htmlModel(Model theModel) {
-        theModel.addAttribute("theDate", new java.util.Date());
-        return "htmlModel";
-    }
+//    @GetMapping("/date")
+//    public String htmlModel(Model theModel) {
+//        theModel.addAttribute("theDate", new java.util.Date());
+//        return "htmlModel";
+//    }
 
-    @GetMapping("/")
+    @GetMapping("/processForm")
     public String showForm (Model theModel) {
         theModel.addAttribute("customer", new Customer());
         return "customer-form";
@@ -31,9 +31,7 @@ public class SpringMVCController {
 
         if (theBindingResult.hasErrors()) {
             return "customer-form";
-        } else {
-            return "customer-confirmation";
-        }
+        } else return "customer-confirmation";
 
     }
 }
