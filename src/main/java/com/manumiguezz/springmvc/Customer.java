@@ -1,4 +1,4 @@
-package com.luv2code.springdemo.mvc;
+package com.manumiguezz.springmvc;
 
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;

@@ -1,4 +1,4 @@
-package com.luv2code.springdemo.mvc;
+package com.manumiguezz.springmvc;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

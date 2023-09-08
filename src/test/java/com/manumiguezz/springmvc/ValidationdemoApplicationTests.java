@@ -1,4 +1,4 @@
-package com.luv2code.springdemo.mvc;
+package com.manumiguezz.springmvc;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
