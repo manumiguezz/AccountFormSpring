@@ -10,8 +10,8 @@ public class Customer {
     @Size(min=1, message="is required")
     private String lastName = "";
 
-    @Max(value = 10, message = "must be less than ten")
-    @Min(value = 0, message = "must be greater than zero")
+    @Max(value = 110, message = "please enter a valid age")
+    @Min(value = 13, message = "must be older than 13")
     private int age;
 
     public String getPostalCode() {
