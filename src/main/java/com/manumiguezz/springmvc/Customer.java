@@ -1,9 +1,6 @@
 package com.manumiguezz.springmvc;
 
-import jakarta.validation.constraints.Max;
-import jakarta.validation.constraints.Min;
-import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.Size;
+import jakarta.validation.constraints.*;
 
 public class Customer {
 
@@ -16,6 +13,17 @@ public class Customer {
     @Max(value = 10, message = "must be less than ten")
     @Min(value = 0, message = "must be greater than zero")
     private int age;
+
+    public String getPostalCode() {
+        return postalCode;
+    }
+
+    public void setPostalCode(String postalCode) {
+        this.postalCode = postalCode;
+    }
+
+    @Pattern(regexp = "[a-zA-Z0-9]{5}", message = "only 5 chars input entry")
+    private String postalCode;
 
 
     public int getAge() {
