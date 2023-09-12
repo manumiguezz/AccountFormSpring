@@ -8,12 +8,15 @@ public class IndConstraintValidator implements ConstraintValidator <IndAnnotatio
     private String indPrefix;
 
     @Override
-    public void initialize(IndAnnotation constraintAnnotation) {
-        ConstraintValidator.super.initialize(constraintAnnotation);
+    public void initialize(IndAnnotation theIndAnnotation) {
+        indPrefix = theIndAnnotation.value();
     }
 
     @Override
-    public boolean isValid(String s, ConstraintValidatorContext constraintValidatorContext) {
-        return false;
+    public boolean isValid(String theCode, ConstraintValidatorContext constraintValidatorContext) {
+
+        boolean result = theCode.startsWith(indPrefix);
+
+        return result;
     }
 }
