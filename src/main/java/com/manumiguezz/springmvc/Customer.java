@@ -10,9 +10,10 @@ public class Customer {
     @Size(min=1, message="is required")
     private String lastName = "";
 
+    @NotNull(message="is required")
     @Max(value = 110, message = "please enter a valid age")
     @Min(value = 13, message = "must be older than 13")
-    private int age;
+    private Integer age;
 
     public String getPostalCode() {
         return postalCode;
@@ -26,11 +27,11 @@ public class Customer {
     private String postalCode;
 
 
-    public int getAge() {
+    public Integer getAge() {
         return age;
     }
 
-    public void setAge(int age) {
+    public void setAge(Integer age) {
         this.age = age;
     }
 
