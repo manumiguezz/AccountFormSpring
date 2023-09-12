@@ -1,5 +1,6 @@
 package com.manumiguezz.springmvc;
 
+import com.manumiguezz.springmvc.validation.IndAnnotation;
 import jakarta.validation.constraints.*;
 
 public class Customer {
@@ -15,16 +16,30 @@ public class Customer {
     @Min(value = 13, message = "must be older than 13")
     private Integer age;
 
+    @Pattern(regexp = "[a-zA-Z0-9]{5}", message = "only 5 chars input entry")
+    private String postalCode;
+
+    @IndAnnotation
+    private String indAnnotation;
+
+//    getters and setters
+
+    public String getIndAnnotation() {
+        return indAnnotation;
+    }
+
+    public void setIndAnnotation(String indAnnotation) {
+        this.indAnnotation = indAnnotation;
+    }
+
     public String getPostalCode() {
         return postalCode;
     }
 
+
     public void setPostalCode(String postalCode) {
         this.postalCode = postalCode;
     }
-
-    @Pattern(regexp = "[a-zA-Z0-9]{5}", message = "only 5 chars input entry")
-    private String postalCode;
 
 
     public Integer getAge() {
